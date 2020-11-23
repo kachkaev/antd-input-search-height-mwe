@@ -1,19 +1,20 @@
 import {
   Form,
   Select,
+  Input,
   InputNumber,
   DatePicker,
   Switch,
   Slider,
   Button,
-} from 'antd'
+} from "antd";
 
-const FormItem = Form.Item
-const Option = Select.Option
+const FormItem = Form.Item;
+const Option = Select.Option;
 
 export default function Home() {
   return (
-    <div style={{ marginTop: 100 }}>
+    <div style={{ marginTop: 20 }}>
       <Form layout="horizontal">
         <FormItem
           label="Input Number"
@@ -74,6 +75,15 @@ export default function Home() {
         >
           <DatePicker name="startDate" />
         </FormItem>
+
+        <FormItem
+          label="Input.Search"
+          labelCol={{ span: 8 }}
+          wrapperCol={{ span: 8 }}
+        >
+          <Input.Search />
+        </FormItem>
+
         <FormItem style={{ marginTop: 48 }} wrapperCol={{ span: 8, offset: 8 }}>
           <Button size="large" type="primary" htmlType="submit">
             OK
@@ -84,5 +94,5 @@ export default function Home() {
         </FormItem>
       </Form>
     </div>
-  )
+  );
 }
